@@ -1,8 +1,8 @@
-function Button() {
-    return(
-        <div className="card-button">
-            <button className="btn">Добавить в Корзину</button>
-        </div>
+function Button({id, binBottom, bought}) {
+return(
+        <button className="btn" onClick={() => binBottom(id)} disabled={bought}>
+            {bought ? "Добавлено в корзину" : "Добавить в корзину"}
+        </button>
     )
 }
 
